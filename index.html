@@ -18,6 +18,7 @@
 		<link rel="stylesheet" href="./css/components/contentloader.css">
 		<link rel="stylesheet" href="./css/components/combobox.css">
 		<link rel="stylesheet" href="./css/components/media-controller.css">
+		<link rel="stylesheet" href="./css/components/time-picker.css">
 	</head>
 
 	<body>
@@ -72,6 +73,11 @@
 				<li>
 					<button data-component-to-show="media-controller" class="overview__button">
 						Media controller
+					</button>
+				</li>
+				<li>
+					<button data-component-to-show="time-picker" class="overview__button">
+						Time picker
 					</button>
 				</li>
 			</ul>
@@ -367,10 +373,23 @@
 				</div>
 			</div>
 
+			<!-- ---------------- TIME PICKER ---------------- -->
 
-
-			<!-- ---------------- BREADCRUMBS ---------------- -->
-
+			<div class="component" data-component-name="time-picker">
+				<div class="component-state">
+					<div class="component-state__name">Normal</div>
+					<div class="component-state__variant">
+						<div class="time-picker">
+							<input type="number" class="time-input" id="hour" placeholder="HH" min="1" max="12" maxlength="2" />
+							<span class="time-colon">:</span>
+							<input type="number" class="time-input" id="minute" placeholder="MM" min="0" max="59" maxlength="2" />
+							<select class="ampm-select" id="ampm">
+							  <option value="AM">AM</option>
+							  <option value="PM">PM</option>
+							</select>
+						</div>
+				</div>
+			</div>
 
 		</main>
 

@@ -109,19 +109,39 @@ componentTriggersButtons.forEach(componentTriggerButton => {
 // ---------------------- MEDIA CONTROLLER ----------------------
 
   function togglePlayPause() {
-	var playPauseButton = document.getElementById('playPauseButton');
-	var icon = playPauseButton.querySelector('i');
+	const playPauseButton = document.getElementById('playPauseButton');
+	const icon = playPauseButton.querySelector('i');
 
 	if (icon.classList.contains('fa-play')) {
-	  // If the icon is play, change it to pause
+
 	  icon.classList.remove('fa-play');
 	  icon.classList.add('fa-pause');
 	} else {
-	  // If the icon is pause, change it to play
+
 	  icon.classList.remove('fa-pause');
 	  icon.classList.add('fa-play');
 	}
   }
 
-  // Add click event to the play/pause button
   document.getElementById('playPauseButton').addEventListener('click', togglePlayPause);
+
+
+
+// ---------------------- TIME PICKER----------------------
+
+function padZero(number) {
+	return number < 10 ? '0' + number : number;
+  }
+
+  function setCurrentTime() {
+	const currentTime = new Date();
+	const hour = currentTime.getHours() % 12 || 12; 
+	const minute = currentTime.getMinutes();
+	const ampm = currentTime.getHours() >= 12 ? 'PM' : 'AM';
+
+	document.getElementById('hour').value = padZero(hour);
+	document.getElementById('minute').value = padZero(minute);
+	document.getElementById('ampm').value = ampm;
+  }
+
+  setCurrentTime();

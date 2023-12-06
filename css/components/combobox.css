@@ -1,41 +1,36 @@
-    /* Style for combobox container */
-    .combobox {
-		position: relative;
-		display: inline-block;
-		width: 500px;
-	  }
-  
-	  /* Style for the combobox input */
-	  .combobox-input {
-		width: 100%;
-		padding: 15px;
-		border: 1px solid #ccc;
-		border-radius: 4px;
-		font-size: 20px;
-	  }
-  
-	  /* Style for the dropdown list */
-	  .combobox-dropdown {
-		position: absolute;
-		top: 100%;
-		left: 0;
-		width: 100%;
-		border: 1px solid #ccc;
-		border-top: none;
-		border-radius: 0 0 4px 4px;
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.149);
-		display: none;
-		background-color: #fff;
-	  }
-  
-	  /* Style for dropdown items */
-	  .combobox-item {
-		padding: 15px;
-		cursor: pointer;
-		transition: background-color 0.3s;
-	  }
-  
-	  /* Highlight item on hover */
-	  .combobox-item:hover {
-		background-color: #f0f0f0;
-	  }
+.combobox {
+	position: relative;
+	display: inline-block;
+	width: 500px;
+	}
+
+	.combobox-input {
+	width: 100%;
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 20px;
+	}
+
+	.combobox-dropdown {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	border: 1px solid #ccc;
+	border-top: none;
+	border-radius: 0 0 4px 4px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.149);
+	display: none;
+	background-color: #fff;
+	}
+
+	.combobox-item {
+	padding: 15px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	}
+
+	.combobox-item:hover {
+	background-color: #f0f0f0;
+	}
