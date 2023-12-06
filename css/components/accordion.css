@@ -1,0 +1,47 @@
+.accordion {
+	border-radius: var(--border-radius);
+	background: var(--color-secondary);
+	overflow: hidden;
+	min-width: 20em;
+}
+
+.accordion__toggle {
+	width: 100%;
+	text-align: left;
+	padding: var(--spacing-small);
+}
+
+.accordion__toggle::before {
+	content: '';
+	display: inline-block;
+	width: 1.2rem;
+	height: 0.8rem;
+	background: url('../../assets/images/arrow.svg') no-repeat bottom;
+	background-size: contain;
+	margin-right: 0.4rem;
+}
+
+.accordion__content {
+	display: none;
+	padding: var(--spacing-small);
+}
+
+.accordion--hover .accordion__toggle,
+.accordion__toggle:hover,
+.accordion__toggle--hover {
+	background: var(--color-accent-1);
+}
+
+.accordion--expanded .accordion__content {
+	display: block;
+}
+
+.accordion--expanded .accordion__toggle {
+	border-bottom: 2px solid var(--color-tertiary);
+}
+
+.accordion--expanded .accordion__toggle::before {
+	transform: rotate(180deg)
+}
+
+

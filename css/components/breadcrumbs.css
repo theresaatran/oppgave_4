@@ -1,0 +1,26 @@
+.breadcrumbs{
+	padding: 10px;
+}
+
+.breadcrumbs__item{
+	display: inline-block;
+}
+
+.breadcrumbs__item:not(:last-of-type)::after{
+	content: '\203a';
+	margin: 0 5px;
+	color: #ccc;
+}
+
+.breadcrumbs__link{
+	text-decoration: none;
+	color: #999;
+}
+
+.breadcrumbs__link:hover{
+	text-decoration: underline;
+}
+
+.breadcrumbs__item span{
+	color: #009578;
+}

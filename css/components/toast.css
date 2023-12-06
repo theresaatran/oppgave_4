@@ -1,0 +1,15 @@
+.toast {
+	min-width: 25rem;
+	text-align: center;
+	padding: var(--spacing-small);
+	background: var(--color-accent-1);
+	border-radius: var(--border-radius);
+}
+
+.toast--warning {
+	background: var(--color-accent-2);
+}
+
+.toast--error {
+	background: var(--color-accent-3);
+}

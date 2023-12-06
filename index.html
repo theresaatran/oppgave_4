@@ -1,0 +1,354 @@
+<html>
+	<head>
+		<meta charset="UTF=8">
+		<title>Component library</title>
+
+		<link rel="stylesheet" href="./css/reset.css">
+		<link rel="stylesheet" href="./css/variables.css">
+		<link rel="stylesheet" href="./css/fonts.css">
+		<link rel="stylesheet" href="./css/style.css">
+
+		<link rel="stylesheet" href="./css/components/accordion.css">
+		<link rel="stylesheet" href="./css/components/button.css">
+		<link rel="stylesheet" href="./css/components/input-checkbox.css">
+		<link rel="stylesheet" href="./css/components/input-radio.css">
+		<link rel="stylesheet" href="./css/components/toast.css">
+		<link rel="stylesheet" href="./css/components/breadcrumbs.css">
+		<link rel="stylesheet" href="./css/components/contentloader.css">
+	</head>
+
+	<body>
+
+		<!-- ---------------- MENU ---------------- -->
+		<aside class="overview">
+			<ul>
+				<li>
+					<button data-component-to-show="accordion" class="overview__button overview__button--active">
+						Accordion
+					</button>
+				</li>
+				
+				<li>
+					<button data-component-to-show="button" class="overview__button">
+						Button
+					</button>
+				</li>
+				
+				<li>
+					<button data-component-to-show="checkbox" class="overview__button">
+						Checkbox
+					</button>
+				</li>
+				
+				<li>
+					<button data-component-to-show="radio" class="overview__button">
+						Radio
+					</button>
+				</li>
+
+				<li>
+					<button data-component-to-show="toast" class="overview__button">
+						Toast
+					</button>
+				</li>
+				<li>
+					<button data-component-to-show="breadcrumbs" class="overview__button">
+						Breadcrumbs
+					</button>
+				</li>
+				<li>
+					<button data-component-to-show="content-loader" class="overview__button">
+						Content loader
+					</button>
+				</li>
+				<li>
+					<button data-component-to-show="drawer" class="overview__button">
+						Drawer
+					</button>
+				</li>
+			</ul>
+		</aside>
+
+		<main>
+			<!-- ---------------- ACCORDION ---------------- -->
+			<div class="component component--visible" data-component-name="accordion">
+				<div class="component-state">
+					<div class="component-state__name">
+						Normal
+					</div>
+
+					<div class="component-state__variant">
+						<div class="accordion">
+							<button class="accordion__toggle">Accordion</button>
+							<div class="accordion__content">...</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="component-state">
+					<div class="component-state__name">
+						Hover	
+					</div>
+
+					<div class="component-state__variant">
+						<div class="accordion accordion--hover">
+							<button class="accordion__toggle">Accordion</button>
+							<div class="accordion__content">...</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="component-state">
+					<div class="component-state__name">
+						Expanded	
+					</div>
+
+					<div class="component-state__variant">
+						<div class="accordion accordion--expanded">
+							<button class="accordion__toggle">Accordion</button>
+							<div class="accordion__content">...</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- ---------------- BUTTON ---------------- -->
+
+			<div class="component" data-component-name="button">
+				<div class="component-state">
+					<div class="component-state__name">
+						Normal
+					</div>
+
+					<div class="component-state__variant">
+						<button class="button">Button</button>
+					</div>
+				</div>
+
+				<div class="component-state">
+					<div class="component-state__name">
+						Hover
+					</div>
+
+					<div class="component-state__variant">
+						<button class="button button--hover">Button</button>
+					</div>
+				</div>
+
+				<div class="component-state">
+					<div class="component-state__name">
+						Active	
+					</div>
+
+					<div class="component-state__variant">
+						<button class="button button--active">Button</button>
+					</div>
+				</div>
+			</div>
+			
+			<!-- ---------------- BUTTON ---------------- -->
+
+			<div class="component" data-component-name="checkbox">
+				<div class="component-state">
+					<div class="component-state__name">Normal</div>
+					<div class="component-state__variant">
+						<div class="input-checkbox">
+							<label class="input-checkbox__label">
+								<input class="input-checkbox__input" hidden type="checkbox" name="option-a">
+								<span class="input-checkbox__text">Option A</span>
+							</label>
+
+							<label class="input-checkbox__label">
+								<input class="input-checkbox__input" hidden type="checkbox" name="option-b">
+								<span class="input-checkbox__text">Option B</span>
+							</label>
+
+							<label class="input-checkbox__label">
+								<input class="input-checkbox__input" hidden type="checkbox" name="option-c">
+								<span class="input-checkbox__text">Option C</span>
+							</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="component-state">
+					<div class="component-state__name">Checked</div>
+					<div class="component-state__variant">
+						<div class="input-checkbox">
+							<label class="input-checkbox__label">
+								<input class="input-checkbox__input" checked hidden type="checkbox" name="option-d">
+								<span class="input-checkbox__text">Option A</span>
+							</label>
+
+							<label class="input-checkbox__label">
+								<input class="input-checkbox__input" checked hidden type="checkbox" name="option-e">
+								<span class="input-checkbox__text">Option B</span>
+							</label>
+
+							<label class="input-checkbox__label">
+								<input class="input-checkbox__input" checked hidden type="checkbox" name="option-f">
+								<span class="input-checkbox__text">Option C</span>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- ---------------- RADIO BUTTON ---------------- -->
+
+			<div class="component" data-component-name="radio">
+				<div class="component-state">
+					<div class="component-state__name">Normal</div>
+					<div class="component-state__variant">
+						<div class="input-radio">
+							<label class="input-radio__label">
+								<input class="input-radio__input" hidden type="radio" name="yes-or-no" value="yes">
+								<span class="input-radio__text">Yes</span>
+							</label>
+
+							<label class="input-radio__label">
+								<input class="input-radio__input" hidden type="radio" name="yes-or-no" value="no">
+								<span class="input-radio__text">No</span>
+							</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="component-state">
+					<div class="component-state__name">Checked</div>
+					<div class="component-state__variant">
+						<div class="input-radio">
+							<label class="input-radio__label">
+								<input class="input-radio__input" checked hidden type="radio" name="yes-or-no-2" value="yes">
+								<span class="input-radio__text">Yes</span>
+							</label>
+
+							<label class="input-radio__label">
+								<input class="input-radio__input" hidden type="radio" name="yes-or-no-2" value="no">
+								<span class="input-radio__text">No</span>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- ---------------- TOAST ---------------- -->
+
+			<div class="component" data-component-name="toast">
+				<div class="component-state">
+					<div class="component-state__name">Normal</div>
+					<div class="component-state__variant">
+						<div class="toast">
+							This is a message
+						</div>
+					</div>
+				</div>
+
+				<div class="component-state">
+					<div class="component-state__name">Warning</div>
+					<div class="component-state__variant">
+						<div class="toast toast--warning">
+							This is a warning
+						</div>
+					</div>
+				</div>
+
+				<div class="component-state">
+					<div class="component-state__name">Error</div>
+					<div class="component-state__variant">
+						<div class="toast toast--error">
+							This is an error
+						</div>
+					</div>
+				</div>
+
+				<div class="component-triggers">
+					<button class="component-triggers__button" data-state-to-test="normal">Test normal state</button>
+					<button class="component-triggers__button" data-state-to-test="warning">Test warning state</button>
+					<button class="component-triggers__button" data-state-to-test="error">Test error state</button>
+				</div>
+			</div>
+
+
+			<!-- ---------------- BREADCRUMBS ---------------- -->
+
+			<div class="component" data-component-name="breadcrumbs">
+				<div class="component-state">
+					<div class="component-state__name">Normal</div>
+					<div class="component-state__variant">
+						 <div class="breadcrumbs-container">
+							<ul class="breadcrumbs">
+								<li class="breadcrumbs__item">
+									<a href="" class="breadcrumbs__list">Home</a>
+								</li>
+								<li class="breadcrumbs__item">
+									<a href="" class="breadcrumbs__list">Media</a>
+								</li>
+								<li class="breadcrumbs__item">
+									<a href="" class="breadcrumbs__list">Photos</a>
+								</li>
+								<li class="breadcrumbs__item">
+									<a href="" class="breadcrumbs__list"><span>Nature</span></a>
+								</li>
+							</ul>
+						 </div>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- ---------------- CONTENT LOADER ---------------- -->
+
+			<div class="component" data-component-name="content-loader">
+				<div class="component-state">
+					<div class="component-state__name">Normal</div>
+					<div class="component-state__variant">
+						<div class="loader-container" id="loader-container">
+							<div class="loader"></div>
+						</div>
+						
+						  <div class="content" id="actual-content">
+							<p>Content is loading..</p>
+						  </div>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- ---------------- DRAWER ---------------- -->
+
+			<div class="component" data-component-name="combobox">
+				<div class="component-state">
+					<div class="component-state__name">Normal</div>
+					<div class="component-state__variant">
+						<div class="combobox" id="combobox">
+							<input type="text" class="combobox-input" placeholder="Velg et land" onclick="toggleDropdown()">
+							<div class="combobox-dropdown" id="dropdown">
+							  <div class="combobox-item" onclick="selectItem('no')">Norge</div>
+							  <div class="combobox-item" onclick="selectItem('se')">Sverige</div>
+							  <div class="combobox-item" onclick="selectItem('dk')">Danmark</div>
+							  <div class="combobox-item" onclick="selectItem('fi')">Finland</div>
+							  <div class="combobox-item" onclick="selectItem('de')">Tyskland</div>
+							  <div class="combobox-item" onclick="selectItem('fr')">Frankrike</div>
+							  <div class="combobox-item" onclick="selectItem('nl')">Nederland</div>
+							</div>
+						  </div>
+					</div>
+
+				</div>
+			</div>
+				
+
+
+			<!-- ---------------- BREADCRUMBS ---------------- -->
+			<!-- ---------------- BREADCRUMBS ---------------- -->
+
+
+		</main>
+
+		<script src="./js/script.js"></script>
+	</body>
+</html>
