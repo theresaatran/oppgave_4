@@ -1,0 +1,25 @@
+    /* Style for the media controller container */
+    .media-controller {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: #333;
+		width: 500px;
+		padding: 15px;
+		color: #fff;
+	  }
+  
+	  /* Style for media control buttons */
+	  .media-button {
+		background: none;
+		border: none;
+		cursor: pointer;
+		font-size: 24px;
+		color: #fff;
+		margin: 0 10px;
+		transition: color 0.3s;
+	  }
+  
+	  .media-button:hover {
+		color: #57a3f3;
+	  }

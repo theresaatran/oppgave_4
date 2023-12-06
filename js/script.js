@@ -81,27 +81,47 @@ componentTriggersButtons.forEach(componentTriggerButton => {
   }, 10000);
 
 
-// ---------------------- DRAWER ----------------------
+// ---------------------- COMBOBOX ----------------------
 
- // Function to toggle the dropdown visibility
  function toggleDropdown() {
-	var dropdown = document.getElementById('dropdown');
+	const dropdown = document.getElementById('dropdown');
 	dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
   }
 
-  // Function to select an item
   function selectItem(key) {
-	var input = document.querySelector('.combobox-input');
+	const input = document.querySelector('.combobox-input');
 	input.value = document.querySelector('.combobox-item[data-key="' + key + '"]').textContent;
 	toggleDropdown();
   }
 
-  // Close the dropdown when clicking outside
+
   document.addEventListener('click', function(event) {
-	var combobox = document.getElementById('combobox');
-	var dropdown = document.getElementById('dropdown');
+	const combobox = document.getElementById('combobox');
+	const dropdown = document.getElementById('dropdown');
 
 	if (!combobox.contains(event.target) && !dropdown.contains(event.target)) {
 	  dropdown.style.display = 'none';
 	}
   });
+
+
+
+// ---------------------- MEDIA CONTROLLER ----------------------
+
+  function togglePlayPause() {
+	var playPauseButton = document.getElementById('playPauseButton');
+	var icon = playPauseButton.querySelector('i');
+
+	if (icon.classList.contains('fa-play')) {
+	  // If the icon is play, change it to pause
+	  icon.classList.remove('fa-play');
+	  icon.classList.add('fa-pause');
+	} else {
+	  // If the icon is pause, change it to play
+	  icon.classList.remove('fa-pause');
+	  icon.classList.add('fa-play');
+	}
+  }
+
+  // Add click event to the play/pause button
+  document.getElementById('playPauseButton').addEventListener('click', togglePlayPause);

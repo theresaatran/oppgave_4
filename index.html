@@ -7,6 +7,7 @@
 		<link rel="stylesheet" href="./css/variables.css">
 		<link rel="stylesheet" href="./css/fonts.css">
 		<link rel="stylesheet" href="./css/style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 		<link rel="stylesheet" href="./css/components/accordion.css">
 		<link rel="stylesheet" href="./css/components/button.css">
@@ -15,6 +16,8 @@
 		<link rel="stylesheet" href="./css/components/toast.css">
 		<link rel="stylesheet" href="./css/components/breadcrumbs.css">
 		<link rel="stylesheet" href="./css/components/contentloader.css">
+		<link rel="stylesheet" href="./css/components/combobox.css">
+		<link rel="stylesheet" href="./css/components/media-controller.css">
 	</head>
 
 	<body>
@@ -62,8 +65,13 @@
 					</button>
 				</li>
 				<li>
-					<button data-component-to-show="drawer" class="overview__button">
-						Drawer
+					<button data-component-to-show="combobox" class="overview__button">
+						Combobox
+					</button>
+				</li>
+				<li>
+					<button data-component-to-show="media-controller" class="overview__button">
+						Media controller
 					</button>
 				</li>
 			</ul>
@@ -318,32 +326,49 @@
 			</div>
 
 
-			<!-- ---------------- DRAWER ---------------- -->
+			<!-- ---------------- COMBOBOX ---------------- -->
 
 			<div class="component" data-component-name="combobox">
 				<div class="component-state">
 					<div class="component-state__name">Normal</div>
 					<div class="component-state__variant">
 						<div class="combobox" id="combobox">
-							<input type="text" class="combobox-input" placeholder="Velg et land" onclick="toggleDropdown()">
+							<input type="text" class="combobox-input" placeholder="Choose a country" onclick="toggleDropdown()">
 							<div class="combobox-dropdown" id="dropdown">
-							  <div class="combobox-item" onclick="selectItem('no')">Norge</div>
-							  <div class="combobox-item" onclick="selectItem('se')">Sverige</div>
-							  <div class="combobox-item" onclick="selectItem('dk')">Danmark</div>
+							  <div class="combobox-item" onclick="selectItem('no')">Norway</div>
+							  <div class="combobox-item" onclick="selectItem('se')">Sweden</div>
+							  <div class="combobox-item" onclick="selectItem('dk')">Denmark</div>
 							  <div class="combobox-item" onclick="selectItem('fi')">Finland</div>
-							  <div class="combobox-item" onclick="selectItem('de')">Tyskland</div>
-							  <div class="combobox-item" onclick="selectItem('fr')">Frankrike</div>
-							  <div class="combobox-item" onclick="selectItem('nl')">Nederland</div>
+							  <div class="combobox-item" onclick="selectItem('de')">Germany</div>
+							  <div class="combobox-item" onclick="selectItem('fr')">France</div>
+							  <div class="combobox-item" onclick="selectItem('nl')">Netherland</div>
 							</div>
 						  </div>
 					</div>
 
 				</div>
 			</div>
-				
 
 
-			<!-- ---------------- BREADCRUMBS ---------------- -->
+
+			<!-- ---------------- MEDIA CONTROLLER ---------------- -->
+
+			<div class="component" data-component-name="media-controller">
+				<div class="component-state">
+					<div class="component-state__name">Normal</div>
+					<div class="component-state__variant">
+						<div class="media-controller">
+							<button class="media-button"><i class="fas fa-backward"></i></button>
+							<button class="media-button" id="playPauseButton"><i class="fas fa-play"></i></button>
+							<button class="media-button"><i class="fas fa-stop"></i></button>
+							<button class="media-button"><i class="fas fa-forward"></i></button>
+						  </div>
+					</div>
+				</div>
+			</div>
+
+
+
 			<!-- ---------------- BREADCRUMBS ---------------- -->
 
 
